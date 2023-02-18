@@ -12,7 +12,7 @@ struct NasaGalleryApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: ContentView.ViewModel(container: .defaultValue))
         }
     }
 }

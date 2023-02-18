@@ -16,6 +16,20 @@
 		E115195329A0925C005E25DE /* NasaGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115195229A0925C005E25DE /* NasaGalleryUITests.swift */; };
 		E115195529A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115195429A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift */; };
 		E115196229A0CF0D005E25DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E115196129A0CF0D005E25DE /* LaunchScreen.storyboard */; };
+		E115196B29A11AC5005E25DE /* ClassService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115196A29A11AC5005E25DE /* ClassService.swift */; };
+		E115196E29A11B1D005E25DE /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115196D29A11B1D005E25DE /* DependencyInjector.swift */; };
+		E115197029A11B65005E25DE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115196F29A11B65005E25DE /* AppState.swift */; };
+		E115197329A11C0B005E25DE /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115197229A11C0B005E25DE /* Loadable.swift */; };
+		E115197529A11C32005E25DE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115197429A11C32005E25DE /* Store.swift */; };
+		E115197729A11C45005E25DE /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115197629A11C45005E25DE /* CancelBag.swift */; };
+		E115197929A11F91005E25DE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E115197829A11F91005E25DE /* data.json */; };
+		E115197F29A12019005E25DE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115197E29A12019005E25DE /* ImageModel.swift */; };
+		E115198129A123F7005E25DE /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198029A123F7005E25DE /* GalleryRepository.swift */; };
+		E115198329A12462005E25DE /* GalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198229A12462005E25DE /* GalleryUseCase.swift */; };
+		E115198529A124E2005E25DE /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198429A124E2005E25DE /* UseCase.swift */; };
+		E115198729A12603005E25DE /* GalleryRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198629A12603005E25DE /* GalleryRepositoryImplementation.swift */; };
+		E115198929A12A48005E25DE /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198829A12A48005E25DE /* GalleryView.swift */; };
+		E115198B29A12A5B005E25DE /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198A29A12A5B005E25DE /* GalleryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +62,20 @@
 		E115195229A0925C005E25DE /* NasaGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGalleryUITests.swift; sourceTree = "<group>"; };
 		E115195429A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E115196129A0CF0D005E25DE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E115196A29A11AC5005E25DE /* ClassService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassService.swift; sourceTree = "<group>"; };
+		E115196D29A11B1D005E25DE /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
+		E115196F29A11B65005E25DE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		E115197229A11C0B005E25DE /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		E115197429A11C32005E25DE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E115197629A11C45005E25DE /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		E115197829A11F91005E25DE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		E115197E29A12019005E25DE /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		E115198029A123F7005E25DE /* GalleryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
+		E115198229A12462005E25DE /* GalleryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryUseCase.swift; sourceTree = "<group>"; };
+		E115198429A124E2005E25DE /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		E115198629A12603005E25DE /* GalleryRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepositoryImplementation.swift; sourceTree = "<group>"; };
+		E115198829A12A48005E25DE /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		E115198A29A12A5B005E25DE /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +126,10 @@
 		E115193129A0925B005E25DE /* NasaGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E115197129A11BF7005E25DE /* Helpers */,
+				E115196C29A11AEC005E25DE /* DI */,
+				E115196829A11A5E005E25DE /* Domian */,
+				E115196329A11979005E25DE /* Features */,
 				E115193229A0925B005E25DE /* NasaGalleryApp.swift */,
 				E115193429A0925B005E25DE /* ContentView.swift */,
 				E115193629A0925C005E25DE /* Assets.xcassets */,
@@ -131,6 +163,120 @@
 				E115195429A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift */,
 			);
 			path = NasaGalleryUITests;
+			sourceTree = "<group>";
+		};
+		E115196329A11979005E25DE /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E115197829A11F91005E25DE /* data.json */,
+				E115196429A1199C005E25DE /* Gallery */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E115196429A1199C005E25DE /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				E115196729A119D1005E25DE /* Presentation */,
+				E115196629A119C6005E25DE /* Domain */,
+				E115196529A119B3005E25DE /* Data */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		E115196529A119B3005E25DE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E115197A29A11FC3005E25DE /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E115196629A119C6005E25DE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E115197D29A11FFD005E25DE /* UseCase */,
+				E115197C29A11FE6005E25DE /* RepositoryInterface */,
+				E115197B29A11FDB005E25DE /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E115196729A119D1005E25DE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E115198829A12A48005E25DE /* GalleryView.swift */,
+				E115198A29A12A5B005E25DE /* GalleryViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E115196829A11A5E005E25DE /* Domian */ = {
+			isa = PBXGroup;
+			children = (
+				E115196929A11AA0005E25DE /* Services */,
+			);
+			path = Domian;
+			sourceTree = "<group>";
+		};
+		E115196929A11AA0005E25DE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E115196A29A11AC5005E25DE /* ClassService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E115196C29A11AEC005E25DE /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E115196D29A11B1D005E25DE /* DependencyInjector.swift */,
+				E115196F29A11B65005E25DE /* AppState.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		E115197129A11BF7005E25DE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E115197229A11C0B005E25DE /* Loadable.swift */,
+				E115197429A11C32005E25DE /* Store.swift */,
+				E115197629A11C45005E25DE /* CancelBag.swift */,
+				E115198429A124E2005E25DE /* UseCase.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E115197A29A11FC3005E25DE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E115198629A12603005E25DE /* GalleryRepositoryImplementation.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E115197B29A11FDB005E25DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E115197E29A12019005E25DE /* ImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E115197C29A11FE6005E25DE /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+				E115198029A123F7005E25DE /* GalleryRepository.swift */,
+			);
+			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
+		E115197D29A11FFD005E25DE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				E115198229A12462005E25DE /* GalleryUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +386,7 @@
 				E115196229A0CF0D005E25DE /* LaunchScreen.storyboard in Resources */,
 				E115193A29A0925C005E25DE /* Preview Assets.xcassets in Resources */,
 				E115193729A0925C005E25DE /* Assets.xcassets in Resources */,
+				E115197929A11F91005E25DE /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +411,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E115196B29A11AC5005E25DE /* ClassService.swift in Sources */,
+				E115197F29A12019005E25DE /* ImageModel.swift in Sources */,
+				E115197329A11C0B005E25DE /* Loadable.swift in Sources */,
+				E115196E29A11B1D005E25DE /* DependencyInjector.swift in Sources */,
+				E115198929A12A48005E25DE /* GalleryView.swift in Sources */,
+				E115197529A11C32005E25DE /* Store.swift in Sources */,
 				E115193529A0925B005E25DE /* ContentView.swift in Sources */,
+				E115198529A124E2005E25DE /* UseCase.swift in Sources */,
+				E115198129A123F7005E25DE /* GalleryRepository.swift in Sources */,
+				E115198729A12603005E25DE /* GalleryRepositoryImplementation.swift in Sources */,
+				E115197729A11C45005E25DE /* CancelBag.swift in Sources */,
+				E115198329A12462005E25DE /* GalleryUseCase.swift in Sources */,
+				E115197029A11B65005E25DE /* AppState.swift in Sources */,
+				E115198B29A12A5B005E25DE /* GalleryViewModel.swift in Sources */,
 				E115193329A0925B005E25DE /* NasaGalleryApp.swift in Sources */,
 				E115193F29A0925C005E25DE /* NasaGallery.xcdatamodeld in Sources */,
 			);

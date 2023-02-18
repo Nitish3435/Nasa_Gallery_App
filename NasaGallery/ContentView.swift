@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    @ObservedObject private(set) var viewModel: ViewModel
     var body: some View {
-        Text("Hello World")
+        GalleryView(viewModel: GalleryView.ViewModel(container: viewModel.container))
     }
 }
+// MARK: - ViewModel
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+extension ContentView {
+    class ViewModel: ObservableObject {
+        let container: DIContainer
+        init(container: DIContainer) {
+            self.container = container
+        }
     }
 }
