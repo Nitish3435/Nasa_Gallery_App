@@ -11,11 +11,11 @@
 		E115193529A0925B005E25DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115193429A0925B005E25DE /* ContentView.swift */; };
 		E115193729A0925C005E25DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E115193629A0925C005E25DE /* Assets.xcassets */; };
 		E115193A29A0925C005E25DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E115193929A0925C005E25DE /* Preview Assets.xcassets */; };
-		E115193C29A0925C005E25DE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115193B29A0925C005E25DE /* Persistence.swift */; };
 		E115193F29A0925C005E25DE /* NasaGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E115193D29A0925C005E25DE /* NasaGallery.xcdatamodeld */; };
 		E115194929A0925C005E25DE /* NasaGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115194829A0925C005E25DE /* NasaGalleryTests.swift */; };
 		E115195329A0925C005E25DE /* NasaGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115195229A0925C005E25DE /* NasaGalleryUITests.swift */; };
 		E115195529A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115195429A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift */; };
+		E115196229A0CF0D005E25DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E115196129A0CF0D005E25DE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +41,13 @@
 		E115193429A0925B005E25DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E115193629A0925C005E25DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E115193929A0925C005E25DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E115193B29A0925C005E25DE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E115193E29A0925C005E25DE /* NasaGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NasaGallery.xcdatamodel; sourceTree = "<group>"; };
 		E115194429A0925C005E25DE /* NasaGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E115194829A0925C005E25DE /* NasaGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGalleryTests.swift; sourceTree = "<group>"; };
 		E115194E29A0925C005E25DE /* NasaGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E115195229A0925C005E25DE /* NasaGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGalleryUITests.swift; sourceTree = "<group>"; };
 		E115195429A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E115196129A0CF0D005E25DE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +101,9 @@
 				E115193229A0925B005E25DE /* NasaGalleryApp.swift */,
 				E115193429A0925B005E25DE /* ContentView.swift */,
 				E115193629A0925C005E25DE /* Assets.xcassets */,
-				E115193B29A0925C005E25DE /* Persistence.swift */,
 				E115193D29A0925C005E25DE /* NasaGallery.xcdatamodeld */,
 				E115193829A0925C005E25DE /* Preview Content */,
+				E115196129A0CF0D005E25DE /* LaunchScreen.storyboard */,
 			);
 			path = NasaGallery;
 			sourceTree = "<group>";
@@ -237,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E115196229A0CF0D005E25DE /* LaunchScreen.storyboard in Resources */,
 				E115193A29A0925C005E25DE /* Preview Assets.xcassets in Resources */,
 				E115193729A0925C005E25DE /* Assets.xcassets in Resources */,
 			);
@@ -263,7 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E115193C29A0925C005E25DE /* Persistence.swift in Sources */,
 				E115193529A0925B005E25DE /* ContentView.swift in Sources */,
 				E115193329A0925B005E25DE /* NasaGalleryApp.swift in Sources */,
 				E115193F29A0925C005E25DE /* NasaGallery.xcdatamodeld in Sources */,
@@ -431,6 +431,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +461,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
