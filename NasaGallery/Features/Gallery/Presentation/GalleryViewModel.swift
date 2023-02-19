@@ -22,10 +22,8 @@ extension GalleryView {
                 .getGalleryImagesUseCase.execute(data: "") { result in
                     switch result {
                     case .success(let images):
-                        print("QWERTY", images.count)
                         self.galleryImages = .loaded(images)
                     case .failure(let error):
-                        print("QWERTY", error.localizedDescription)
                         self.galleryImages = .failed(error)
                     }
             }

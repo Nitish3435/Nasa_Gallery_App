@@ -30,6 +30,8 @@
 		E115198729A12603005E25DE /* GalleryRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198629A12603005E25DE /* GalleryRepositoryImplementation.swift */; };
 		E115198929A12A48005E25DE /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198829A12A48005E25DE /* GalleryView.swift */; };
 		E115198B29A12A5B005E25DE /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198A29A12A5B005E25DE /* GalleryViewModel.swift */; };
+		E115198D29A13F5E005E25DE /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198C29A13F5E005E25DE /* ActivityIndicator.swift */; };
+		E115198F29A14E90005E25DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198E29A14E90005E25DE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		E115198629A12603005E25DE /* GalleryRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepositoryImplementation.swift; sourceTree = "<group>"; };
 		E115198829A12A48005E25DE /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		E115198A29A12A5B005E25DE /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		E115198C29A13F5E005E25DE /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		E115198E29A14E90005E25DE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,8 @@
 				E115197429A11C32005E25DE /* Store.swift */,
 				E115197629A11C45005E25DE /* CancelBag.swift */,
 				E115198429A124E2005E25DE /* UseCase.swift */,
+				E115198C29A13F5E005E25DE /* ActivityIndicator.swift */,
+				E115198E29A14E90005E25DE /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E115196B29A11AC5005E25DE /* ClassService.swift in Sources */,
+				E115198F29A14E90005E25DE /* Extensions.swift in Sources */,
 				E115197F29A12019005E25DE /* ImageModel.swift in Sources */,
 				E115197329A11C0B005E25DE /* Loadable.swift in Sources */,
 				E115196E29A11B1D005E25DE /* DependencyInjector.swift in Sources */,
@@ -427,6 +434,7 @@
 				E115198B29A12A5B005E25DE /* GalleryViewModel.swift in Sources */,
 				E115193329A0925B005E25DE /* NasaGalleryApp.swift in Sources */,
 				E115193F29A0925C005E25DE /* NasaGallery.xcdatamodeld in Sources */,
+				E115198D29A13F5E005E25DE /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
