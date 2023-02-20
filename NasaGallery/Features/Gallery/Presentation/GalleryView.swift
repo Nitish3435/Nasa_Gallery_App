@@ -9,7 +9,7 @@ import SwiftUI
 import CachedAsyncImage
 
 struct GalleryView: View {
-    @State var test: Bool = false
+    @State var animateText: Bool = false
     @State var isActive: Bool = false
     @State var index: Int = 0
     let threeColumnGrid = [GridItem(.flexible(minimum: 40)),
@@ -36,9 +36,10 @@ struct GalleryView: View {
                             startPoint: .leading,
                             endPoint: .trailing
                         )
-                        .offset(y: test ? 0 : -80)
+                        .offset(y: animateText ? 0 : -80)
                         .animation(.interpolatingSpring(stiffness: 100,
-                                                        damping: 5, initialVelocity: 5), value: test)
+                                                        damping: 5, initialVelocity: 5),
+                                   value: animateText)
                         .padding(.bottom, 15)
                     Spacer()
                 }
@@ -49,7 +50,7 @@ struct GalleryView: View {
                         case .notRequested:
                             Color.clear
                                 .onAppear {
-                                    test.toggle()
+                                    animateText.toggle()
                                     viewModel.loadClass()
                                 }
                         case .isLoading:
@@ -58,7 +59,26 @@ struct GalleryView: View {
                                 .frame(maxWidth: .infinity, alignment: .center)
                             Spacer()
                         case .failed(let error):
-                            Text("\(error.localizedDescription)")
+                            HStack {
+                                Spacer()
+                                VStack {
+                                     Text("Something went wrong")
+                                         .font(.headline)
+                                         .padding()
+                                    Text("\(error.localizedDescription)")
+                                         .foregroundColor(.red)
+                                         .padding()
+                                    Button(action: viewModel.loadClass) {
+                                         Text("Try again")
+                                             .foregroundColor(.white)
+                                             .padding(.horizontal, 20)
+                                             .padding(.vertical, 10)
+                                             .background(Color.blue)
+                                             .cornerRadius(10)
+                                     }
+                                 }
+                                Spacer()
+                            }
                         case .loaded(let images):
                             ScrollView(showsIndicators: false) {
                                 LazyVGrid(columns: threeColumnGrid, alignment: .leading, spacing: 36) {

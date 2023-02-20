@@ -9,4 +9,5 @@ import Foundation
 
 protocol GalleryRepository {
     func fetchGalleryPhotos(completion: @escaping (Result<[ImageModel], Error>) -> Void)
+    func checkAPIStatus(completion: @escaping (Result<HTTPURLResponse, Error>) -> Void)
 }

@@ -24,4 +24,19 @@ class GalleryRepositoryImplementation: GalleryRepository {
               urlSession.resume()
           }
     }
+
+    func checkAPIStatus(completion: @escaping (Result<HTTPURLResponse, Error>) -> Void) {
+        if let url = URL(string: "https://raw.githubusercontent.com/obvious/take-home-exercise-data/trunk/nasa-pictures.json") {
+              let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+                  if let error = error {
+                      completion(.failure(error))
+                  }
+                  if let response = response as? HTTPURLResponse {
+
+                      completion(.success(response))
+                  }
+              }
+              urlSession.resume()
+          }
+    }
 }

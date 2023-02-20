@@ -13,8 +13,6 @@
 		E115193A29A0925C005E25DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E115193929A0925C005E25DE /* Preview Assets.xcassets */; };
 		E115193F29A0925C005E25DE /* NasaGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E115193D29A0925C005E25DE /* NasaGallery.xcdatamodeld */; };
 		E115194929A0925C005E25DE /* NasaGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115194829A0925C005E25DE /* NasaGalleryTests.swift */; };
-		E115195329A0925C005E25DE /* NasaGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115195229A0925C005E25DE /* NasaGalleryUITests.swift */; };
-		E115195529A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115195429A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift */; };
 		E115196229A0CF0D005E25DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E115196129A0CF0D005E25DE /* LaunchScreen.storyboard */; };
 		E115196B29A11AC5005E25DE /* ClassService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115196A29A11AC5005E25DE /* ClassService.swift */; };
 		E115196E29A11B1D005E25DE /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115196D29A11B1D005E25DE /* DependencyInjector.swift */; };
@@ -36,6 +34,15 @@
 		E115199429A1D99E005E25DE /* GalleryImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115199329A1D99E005E25DE /* GalleryImageDetailView.swift */; };
 		E115199629A1DD9D005E25DE /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115199529A1DD9D005E25DE /* PagingView.swift */; };
 		E115199B29A38A8A005E25DE /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = E115199A29A38A8A005E25DE /* CachedAsyncImage */; };
+		E11519A129A3AC35005E25DE /* GalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198229A12462005E25DE /* GalleryUseCase.swift */; };
+		E11519A229A3AC40005E25DE /* GalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198229A12462005E25DE /* GalleryUseCase.swift */; };
+		E11519A429A3DCED005E25DE /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198029A123F7005E25DE /* GalleryRepository.swift */; };
+		E11519A529A3DCF8005E25DE /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198429A124E2005E25DE /* UseCase.swift */; };
+		E11519A629A3DCFE005E25DE /* GalleryRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198629A12603005E25DE /* GalleryRepositoryImplementation.swift */; };
+		E11519A729A3DD2E005E25DE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115197E29A12019005E25DE /* ImageModel.swift */; };
+		E11519A829A3DD52005E25DE /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198429A124E2005E25DE /* UseCase.swift */; };
+		E11519A929A3DD6B005E25DE /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198029A123F7005E25DE /* GalleryRepository.swift */; };
+		E11519AA29A3DD85005E25DE /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115197E29A12019005E25DE /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +72,6 @@
 		E115194429A0925C005E25DE /* NasaGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E115194829A0925C005E25DE /* NasaGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGalleryTests.swift; sourceTree = "<group>"; };
 		E115194E29A0925C005E25DE /* NasaGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E115195229A0925C005E25DE /* NasaGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGalleryUITests.swift; sourceTree = "<group>"; };
-		E115195429A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E115196129A0CF0D005E25DE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E115196A29A11AC5005E25DE /* ClassService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassService.swift; sourceTree = "<group>"; };
 		E115196D29A11B1D005E25DE /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
@@ -122,7 +127,6 @@
 			children = (
 				E115193129A0925B005E25DE /* NasaGallery */,
 				E115194729A0925C005E25DE /* NasaGalleryTests */,
-				E115195129A0925C005E25DE /* NasaGalleryUITests */,
 				E115193029A0925B005E25DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -169,15 +173,6 @@
 				E115194829A0925C005E25DE /* NasaGalleryTests.swift */,
 			);
 			path = NasaGalleryTests;
-			sourceTree = "<group>";
-		};
-		E115195129A0925C005E25DE /* NasaGalleryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E115195229A0925C005E25DE /* NasaGalleryUITests.swift */,
-				E115195429A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift */,
-			);
-			path = NasaGalleryUITests;
 			sourceTree = "<group>";
 		};
 		E115196329A11979005E25DE /* Features */ = {
@@ -490,6 +485,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11519A129A3AC35005E25DE /* GalleryUseCase.swift in Sources */,
+				E11519A729A3DD2E005E25DE /* ImageModel.swift in Sources */,
+				E11519A629A3DCFE005E25DE /* GalleryRepositoryImplementation.swift in Sources */,
+				E11519A529A3DCF8005E25DE /* UseCase.swift in Sources */,
+				E11519A429A3DCED005E25DE /* GalleryRepository.swift in Sources */,
 				E115194929A0925C005E25DE /* NasaGalleryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,8 +498,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E115195529A0925C005E25DE /* NasaGalleryUITestsLaunchTests.swift in Sources */,
-				E115195329A0925C005E25DE /* NasaGalleryUITests.swift in Sources */,
+				E11519A229A3AC40005E25DE /* GalleryUseCase.swift in Sources */,
+				E11519A929A3DD6B005E25DE /* GalleryRepository.swift in Sources */,
+				E11519A829A3DD52005E25DE /* UseCase.swift in Sources */,
+				E11519AA29A3DD85005E25DE /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

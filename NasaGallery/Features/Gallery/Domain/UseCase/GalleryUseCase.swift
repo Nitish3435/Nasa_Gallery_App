@@ -12,6 +12,16 @@ class GalleryUseCase {
     init(galleryRepository: GalleryRepository) {
         self.getGalleryImagesUseCase = GetGalleryImagesUseCase(galleryRepository: galleryRepository)
     }
+    func checkApiStatus(completion: @escaping (Result<HTTPURLResponse, Error>) -> Void) {
+        getGalleryImagesUseCase.galleryRepository.checkAPIStatus { result in
+            switch result {
+            case .success(let response):
+                completion(.success(response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
 extension GalleryUseCase {
     struct GetGalleryImagesUseCase: UseCase {
