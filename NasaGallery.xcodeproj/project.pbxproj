@@ -32,6 +32,9 @@
 		E115198B29A12A5B005E25DE /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198A29A12A5B005E25DE /* GalleryViewModel.swift */; };
 		E115198D29A13F5E005E25DE /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198C29A13F5E005E25DE /* ActivityIndicator.swift */; };
 		E115198F29A14E90005E25DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115198E29A14E90005E25DE /* Extensions.swift */; };
+		E115199229A1D33C005E25DE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115199129A1D33C005E25DE /* Network.swift */; };
+		E115199429A1D99E005E25DE /* GalleryImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115199329A1D99E005E25DE /* GalleryImageDetailView.swift */; };
+		E115199629A1DD9D005E25DE /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115199529A1DD9D005E25DE /* PagingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		E115198A29A12A5B005E25DE /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		E115198C29A13F5E005E25DE /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		E115198E29A14E90005E25DE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E115199129A1D33C005E25DE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E115199329A1D99E005E25DE /* GalleryImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageDetailView.swift; sourceTree = "<group>"; };
+		E115199529A1DD9D005E25DE /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,7 @@
 		E115196329A11979005E25DE /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E115199029A1D328005E25DE /* Network */,
 				E115197829A11F91005E25DE /* data.json */,
 				E115196429A1199C005E25DE /* Gallery */,
 			);
@@ -211,6 +218,8 @@
 			children = (
 				E115198829A12A48005E25DE /* GalleryView.swift */,
 				E115198A29A12A5B005E25DE /* GalleryViewModel.swift */,
+				E115199329A1D99E005E25DE /* GalleryImageDetailView.swift */,
+				E115199529A1DD9D005E25DE /* PagingView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -283,6 +292,14 @@
 				E115198229A12462005E25DE /* GalleryUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		E115199029A1D328005E25DE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E115199129A1D33C005E25DE /* Network.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,8 +434,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E115199429A1D99E005E25DE /* GalleryImageDetailView.swift in Sources */,
 				E115196B29A11AC5005E25DE /* ClassService.swift in Sources */,
 				E115198F29A14E90005E25DE /* Extensions.swift in Sources */,
+				E115199629A1DD9D005E25DE /* PagingView.swift in Sources */,
 				E115197F29A12019005E25DE /* ImageModel.swift in Sources */,
 				E115197329A11C0B005E25DE /* Loadable.swift in Sources */,
 				E115196E29A11B1D005E25DE /* DependencyInjector.swift in Sources */,
@@ -429,6 +448,7 @@
 				E115198129A123F7005E25DE /* GalleryRepository.swift in Sources */,
 				E115198729A12603005E25DE /* GalleryRepositoryImplementation.swift in Sources */,
 				E115197729A11C45005E25DE /* CancelBag.swift in Sources */,
+				E115199229A1D33C005E25DE /* Network.swift in Sources */,
 				E115198329A12462005E25DE /* GalleryUseCase.swift in Sources */,
 				E115197029A11B65005E25DE /* AppState.swift in Sources */,
 				E115198B29A12A5B005E25DE /* GalleryViewModel.swift in Sources */,

@@ -10,18 +10,19 @@ import Foundation
 class GalleryRepositoryImplementation: GalleryRepository {
     var galleryImages: [ImageModel] = []
     func fetchGalleryPhotos(completion: @escaping (Result<[ImageModel], Error>) -> Void) {
-        guard let url = Bundle.main.url(forResource: "data", withExtension: "json")
-            else {
-                return
-            }
+        if let url = URL(string: "https://raw.githubusercontent.com/obvious/take-home-exercise-data/trunk/nasa-pictures.json") {
+              let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+                  if let error = error {
+                      completion(.failure(error))
+                  }
 
-        let data = try? Data(contentsOf: url)
-        guard let data = data else {
-            return
-        }
-        let users = try? JSONDecoder().decode([ImageModel].self, from: data)
-        galleryImages = users ?? []
-        completion(.success(galleryImages))
-
+                  if let data = data {
+                      let galleryImages = try? JSONDecoder().decode([ImageModel].self, from: data)
+                      self.galleryImages = galleryImages ?? []
+                      completion(.success(self.galleryImages))
+                  }
+              }
+              urlSession.resume()
+          }
     }
 }

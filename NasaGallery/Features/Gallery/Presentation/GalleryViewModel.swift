@@ -10,6 +10,7 @@ import Foundation
 extension GalleryView {
     class ViewModel: ObservableObject {
         @Published var galleryImages: Loadable<[ImageModel]>
+        @Published var loadedImages: [ImageModel] = []
         let container: DIContainer
         init(container: DIContainer, galleryImages: Loadable<[ImageModel]> = .notRequested) {
             self.container = container
@@ -23,6 +24,7 @@ extension GalleryView {
                     switch result {
                     case .success(let images):
                         self.galleryImages = .loaded(images)
+                        self.loadedImages = images
                     case .failure(let error):
                         self.galleryImages = .failed(error)
                     }
