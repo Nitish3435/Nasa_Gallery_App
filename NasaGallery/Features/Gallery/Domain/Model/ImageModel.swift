@@ -10,6 +10,7 @@ struct Response: Decodable {
     var images: [ImageModel]
 }
 struct ImageModel: Identifiable, Codable, Hashable {
+    var copyRight: String?
     var date: String = ""
     var explanation: String = ""
     var hdurl: String = ""
@@ -19,6 +20,7 @@ struct ImageModel: Identifiable, Codable, Hashable {
     var url: String = ""
     var id = UUID()
     enum CodingKeys: String, CodingKey {
+        case copyRight = "copyright"
         case date
         case explanation
         case hdurl

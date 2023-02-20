@@ -49,8 +49,6 @@ struct PagingView<Content>: View where Content: View {
                 )
             }
             .clipped()
-
-            PageControl(index: $index, maxIndex: maxIndex)
         }
     }
 

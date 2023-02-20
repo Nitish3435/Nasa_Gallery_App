@@ -15,7 +15,6 @@ class GalleryRepositoryImplementation: GalleryRepository {
                   if let error = error {
                       completion(.failure(error))
                   }
-
                   if let data = data {
                       let galleryImages = try? JSONDecoder().decode([ImageModel].self, from: data)
                       self.galleryImages = galleryImages ?? []

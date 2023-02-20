@@ -23,10 +23,14 @@ extension GalleryView {
                 .getGalleryImagesUseCase.execute(data: "") { result in
                     switch result {
                     case .success(let images):
-                        self.galleryImages = .loaded(images)
-                        self.loadedImages = images
+                        DispatchQueue.main.async {
+                            self.galleryImages = .loaded(images)
+                            self.loadedImages = images
+                        }
                     case .failure(let error):
-                        self.galleryImages = .failed(error)
+                        DispatchQueue.main.async {
+                            self.galleryImages = .failed(error)
+                        }
                     }
             }
             

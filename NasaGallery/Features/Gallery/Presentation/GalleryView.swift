@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct GalleryView: View {
     @State var test: Bool = false
@@ -26,17 +27,21 @@ struct GalleryView: View {
                     images: $viewModel.loadedImages,
                     index: $index),
                                isActive: $isActive) { EmptyView()}
-                Text("NASA Gallery")
-                    .font(Font.system(size: 46, weight: .bold))
-                    .foregroundLinearGradient(
-                        colors: [.red, .blue, .green, .yellow, .cyan],
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    )
-                    .offset(y: test ? 0 : -80)
-                    .animation(.interpolatingSpring(stiffness: 100,
-                                                    damping: 5, initialVelocity: 5), value: test)
-                    .padding(.bottom, 15)
+                HStack {
+                    Spacer()
+                    Text("NASA Gallery")
+                        .font(Font.custom("WorkSans-Regular", size: 30))
+                        .foregroundLinearGradient(
+                            colors: [.white],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                        .offset(y: test ? 0 : -80)
+                        .animation(.interpolatingSpring(stiffness: 100,
+                                                        damping: 5, initialVelocity: 5), value: test)
+                        .padding(.bottom, 15)
+                    Spacer()
+                }
                 HStack(spacing: 0) {
                     Spacer()
                     VStack {
@@ -49,11 +54,11 @@ struct GalleryView: View {
                                 }
                         case .isLoading:
                             Spacer()
-                            LoadingFiveLinesCenter(color: .black)
+                            LoadingFiveLinesCenter(color: .green)
                                 .frame(maxWidth: .infinity, alignment: .center)
                             Spacer()
-                        case .failed(_):
-                            Text("Error")
+                        case .failed(let error):
+                            Text("\(error.localizedDescription)")
                         case .loaded(let images):
                             ScrollView(showsIndicators: false) {
                                 LazyVGrid(columns: threeColumnGrid, alignment: .leading, spacing: 36) {
@@ -62,7 +67,7 @@ struct GalleryView: View {
                                     })) { nasaImage in
                                         GeometryReader { reader in
                                             VStack(spacing: 0) {
-                                                AsyncImage(
+                                                CachedAsyncImage(
                                                     url: URL(string: nasaImage.url),
                                                     content: { image in
                                                         image
@@ -83,6 +88,14 @@ struct GalleryView: View {
                                                             .resizable()
                                                             .frame(width: reader.size.width)
                                                             .cornerRadius(2)
+                                                            .onTapGesture {
+                                                                index = images.sorted(by: {
+                                                                    (lhs, rhs) in
+                                                                    lhs.date > rhs.date
+
+                                                                }).firstIndex(of: nasaImage) ?? 0
+                                                                isActive.toggle()
+                                                            }
                                                     }
                                                 )
                                             }

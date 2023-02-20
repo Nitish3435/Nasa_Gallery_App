@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct GalleryImageDetailView: View {
     @Environment(\.presentationMode) var present
@@ -13,11 +14,20 @@ struct GalleryImageDetailView: View {
     @Binding var index: Int
     var body: some View {
         VStack(spacing: 20) {
+            HStack {
+                Image(systemName: "arrow.backward")
+                    .foregroundColor(.white)
+                    .font(.system(size: 20))
+                    .onTapGesture {
+                        present.wrappedValue.dismiss()
+                    }
+                Spacer()
+            }
             PagingView(index: $index.animation(), maxIndex: images.count - 1) {
                 ForEach(self.images.sorted(by: { (lhs, rhs) in
                     lhs.date > rhs.date
                 }), id: \.self) { imageName in
-                    AsyncImage(
+                    CachedAsyncImage(
                         url: URL(string: imageName.url),
                         content: { image in
                             image
@@ -36,17 +46,26 @@ struct GalleryImageDetailView: View {
             }
             .aspectRatio(4/3, contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: 15))
-            PagingView(index: $index.animation(), maxIndex: images.count - 1) {
-                ForEach(self.images.sorted(by: { (lhs, rhs) in
-                    lhs.date > rhs.date
-                }), id: \.self) { imageName in
-                    Text(imageName.explanation)
-                        .font(.system(size: 9))
-                        .foregroundColor(.white)
-                }
+            ScrollView(showsIndicators: false) {
+                Text(images[index].title)
+                    .font(Font.custom("WorkSans-Regular", size: 25))
+                    .foregroundColor(.white)
+                    .padding(.bottom, 10)
+                Text(images[index].explanation)
+                    .font(Font.custom("WorkSans-Regular", size: 15))
+                    .foregroundColor(.white)
             }
-            .aspectRatio(3/4, contentMode: .fit)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
+            Spacer()
+            HStack {
+                Image(systemName: "c.circle")
+                    .foregroundColor(.red)
+                    .font(.system(size: 20))
+                Text(images[index].copyRight ?? "CopyrightNASA")
+                    .font(Font.custom("WorkSans-Regular", size: 20))
+                    .foregroundColor(.white)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer()
+            }
             Spacer()
         }
         .padding([.trailing, .leading], 20)
@@ -54,6 +73,7 @@ struct GalleryImageDetailView: View {
         .background(Color.black)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        .frame(maxHeight: .infinity)
         .ignoresSafeArea(.keyboard, edges: .bottom)
     }
 }

@@ -35,6 +35,7 @@
 		E115199229A1D33C005E25DE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115199129A1D33C005E25DE /* Network.swift */; };
 		E115199429A1D99E005E25DE /* GalleryImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115199329A1D99E005E25DE /* GalleryImageDetailView.swift */; };
 		E115199629A1DD9D005E25DE /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115199529A1DD9D005E25DE /* PagingView.swift */; };
+		E115199B29A38A8A005E25DE /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = E115199A29A38A8A005E25DE /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		E115199129A1D33C005E25DE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E115199329A1D99E005E25DE /* GalleryImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageDetailView.swift; sourceTree = "<group>"; };
 		E115199529A1DD9D005E25DE /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
+		E115199F29A39B29005E25DE /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		E11519A029A39BBA005E25DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E115199B29A38A8A005E25DE /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,13 +140,14 @@
 		E115193129A0925B005E25DE /* NasaGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E11519A029A39BBA005E25DE /* Info.plist */,
+				E115199D29A39A50005E25DE /* Resources */,
 				E115197129A11BF7005E25DE /* Helpers */,
 				E115196C29A11AEC005E25DE /* DI */,
 				E115196829A11A5E005E25DE /* Domian */,
 				E115196329A11979005E25DE /* Features */,
 				E115193229A0925B005E25DE /* NasaGalleryApp.swift */,
 				E115193429A0925B005E25DE /* ContentView.swift */,
-				E115193629A0925C005E25DE /* Assets.xcassets */,
 				E115193D29A0925C005E25DE /* NasaGallery.xcdatamodeld */,
 				E115193829A0925C005E25DE /* Preview Content */,
 				E115196129A0CF0D005E25DE /* LaunchScreen.storyboard */,
@@ -302,6 +307,23 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		E115199D29A39A50005E25DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E115199E29A39A6E005E25DE /* Fonts */,
+				E115193629A0925C005E25DE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E115199E29A39A6E005E25DE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E115199F29A39B29005E25DE /* WorkSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,6 +340,9 @@
 			dependencies = (
 			);
 			name = NasaGallery;
+			packageProductDependencies = (
+				E115199A29A38A8A005E25DE /* CachedAsyncImage */,
+			);
 			productName = NasaGallery;
 			productReference = E115192F29A0925B005E25DE /* NasaGallery.app */;
 			productType = "com.apple.product-type.application";
@@ -390,6 +415,9 @@
 				Base,
 			);
 			mainGroup = E115192629A0925B005E25DE;
+			packageReferences = (
+				E115199929A38A8A005E25DE /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = E115193029A0925B005E25DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -616,6 +644,7 @@
 				DEVELOPMENT_TEAM = QYW3KH8L3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NasaGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -646,6 +675,7 @@
 				DEVELOPMENT_TEAM = QYW3KH8L3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NasaGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -781,6 +811,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E115199929A38A8A005E25DE /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E115199A29A38A8A005E25DE /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E115199929A38A8A005E25DE /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E115193D29A0925C005E25DE /* NasaGallery.xcdatamodeld */ = {
