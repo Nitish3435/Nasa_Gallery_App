@@ -11,7 +11,6 @@ import SimpleToast
 
 struct GalleryImageDetailView: View {
     let selectToastOptions = SimpleToastOptions(alignment: .top, hideAfter: 3,
-                                                showBackdrop: false,
                                                 animation: .easeInOut, modifierType: .scale)
     @State var showSelectToast: Bool = false
     @Environment(\.presentationMode) var present
@@ -20,12 +19,13 @@ struct GalleryImageDetailView: View {
     var body: some View {
         VStack(spacing: 20) {
             HStack {
-                Image(systemName: "arrow.backward")
-                    .foregroundColor(.white)
-                    .font(.system(size: 20))
-                    .onTapGesture {
-                        present.wrappedValue.dismiss()
-                    }
+                Button(action: {
+                    present.wrappedValue.dismiss()
+                }, label: {
+                    Image(systemName: "arrow.backward")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20))
+                })
                 Spacer()
             }
             PagingView(index: $index.animation(), maxIndex: images.count - 1) {

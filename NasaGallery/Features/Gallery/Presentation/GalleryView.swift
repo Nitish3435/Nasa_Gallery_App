@@ -21,12 +21,8 @@ struct GalleryView: View {
         _viewModel = StateObject(wrappedValue: ViewModel(container: viewModel.container))
     }
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(alignment: .leading, spacing: 0) {
-                NavigationLink(destination: GalleryImageDetailView(
-                    images: $viewModel.loadedImages,
-                    index: $index),
-                               isActive: $isActive) { EmptyView()}
                 HStack {
                     Spacer()
                     Text("NASA Gallery")
@@ -81,7 +77,7 @@ struct GalleryView: View {
                             }
                         case .loaded(let images):
                             ScrollView(showsIndicators: false) {
-                                LazyVGrid(columns: threeColumnGrid, alignment: .leading, spacing: 36) {
+                                LazyVGrid(columns: threeColumnGrid, alignment: .leading, spacing: 25) {
                                     ForEach(images.sorted(by: { (lhs, rhs) in
                                         lhs.date > rhs.date
                                     })) { nasaImage in
@@ -134,6 +130,11 @@ struct GalleryView: View {
             }
             .onAppear {
                 network.checkConnection()
+            }
+            .navigationDestination(isPresented: $isActive) {
+                GalleryImageDetailView(
+                   images: $viewModel.loadedImages,
+                   index: $index)
             }
             .padding([.trailing, .leading], 20)
             .padding(.top, 5)
