@@ -142,5 +142,6 @@ struct GalleryView: View {
             .navigationBarBackButtonHidden(true)
             .ignoresSafeArea(.keyboard, edges: .bottom)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }

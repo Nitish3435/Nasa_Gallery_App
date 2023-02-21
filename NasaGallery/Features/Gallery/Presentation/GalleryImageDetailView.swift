@@ -7,8 +7,13 @@
 
 import SwiftUI
 import CachedAsyncImage
+import SimpleToast
 
 struct GalleryImageDetailView: View {
+    let selectToastOptions = SimpleToastOptions(alignment: .top, hideAfter: 3,
+                                                showBackdrop: false,
+                                                animation: .easeInOut, modifierType: .scale)
+    @State var showSelectToast: Bool = false
     @Environment(\.presentationMode) var present
     @Binding var images: [ImageModel]
     @Binding var index: Int
@@ -68,9 +73,27 @@ struct GalleryImageDetailView: View {
             }
             Spacer()
         }
+        .onAppear {
+            showSelectToast.toggle()
+        }
         .padding([.trailing, .leading], 20)
         .padding(.top, 5)
         .background(Color.black)
+        .simpleToast(isPresented: $showSelectToast, options: selectToastOptions) {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("<< Swipe left or Swipe right >>")
+                        .font(.custom("WorkSans-Regular", size: 16))
+                        .padding()
+                        .lineLimit(1)
+                }
+                .frame(maxWidth: .infinity)
+                .background(Color.green)
+                .cornerRadius(8)
+                .foregroundColor(Color.white)
+            }
+            .padding([.trailing, .leading], 36)
+        }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         .frame(maxHeight: .infinity)
