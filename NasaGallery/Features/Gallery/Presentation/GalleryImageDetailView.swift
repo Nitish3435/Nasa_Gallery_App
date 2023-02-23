@@ -52,11 +52,15 @@ struct GalleryImageDetailView: View {
             .aspectRatio(4/3, contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             ScrollView(showsIndicators: false) {
-                Text(images[index].title)
+                Text(images.sorted(by: { (lhs, rhs) in
+                    lhs.date > rhs.date
+                })[index].title)
                     .font(Font.custom("WorkSans-Regular", size: 25))
                     .foregroundColor(.white)
                     .padding(.bottom, 10)
-                Text(images[index].explanation)
+                Text(images.sorted(by: { (lhs, rhs) in
+                    lhs.date > rhs.date
+                })[index].explanation)
                     .font(Font.custom("WorkSans-Regular", size: 15))
                     .foregroundColor(.white)
             }
@@ -65,7 +69,9 @@ struct GalleryImageDetailView: View {
                 Image(systemName: "c.circle")
                     .foregroundColor(.red)
                     .font(.system(size: 20))
-                Text(images[index].copyRight ?? "CopyrightNASA")
+                Text(images.sorted(by: { (lhs, rhs) in
+                    lhs.date > rhs.date
+                })[index].copyRight ?? "CopyrightNASA")
                     .font(Font.custom("WorkSans-Regular", size: 20))
                     .foregroundColor(.white)
                     .fixedSize(horizontal: false, vertical: true)
