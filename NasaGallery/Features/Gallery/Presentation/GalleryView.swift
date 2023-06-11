@@ -25,7 +25,7 @@ struct GalleryView: View {
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Spacer()
-                    Text("NASA Gallery Hello Silicon")
+                    Text("Hello BATCH 2")
                         .font(Font.custom("WorkSans-Regular", size: 30))
                         .foregroundLinearGradient(
                             colors: [.white],
